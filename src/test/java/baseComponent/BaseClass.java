@@ -3,7 +3,6 @@ package baseComponent;
 import java.io.IOException;
 
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.BeforeClass;
 import driverFactory.BrowserInitialization;
 
 public class BaseClass {

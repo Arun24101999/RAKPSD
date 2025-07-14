@@ -18,6 +18,7 @@ public class Signin {
     
     @BeforeClass
 	public void signIn() throws IOException {
+    	
 		driver = BaseClass.urlLaunch();
 	}
     
