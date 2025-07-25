@@ -5,6 +5,7 @@
     <classes>
       <class name="admin.Signin"/>
       <class name="admin.UserRoles"/>
+      <class name="admin.Users"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

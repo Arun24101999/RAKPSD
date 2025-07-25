@@ -6,31 +6,22 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import baseComponent.BaseClass;
 
-public class Signin {
+public class Signin extends BaseClass {
 
     public static WebDriver driver;
     
-    @BeforeClass
-	public void signIn() throws IOException {
-    	
-		driver = BaseClass.urlLaunch();
-	}
-    
-    @AfterClass
-	public void quit() {
-		driver.quit();
-	}
+   
    
     
 	@Test
 	public static void loginTest() throws InterruptedException, IOException {
 		// Move the cursor to the Element so we use the actions class
+		driver=BaseClass.driver;
+		driver.get("https://test-pms-dev.medyaan.com/home");
 		WebElement ele = driver.findElement(By.xpath("//button[@class='btn secondary-btn cancel-btn-size btn-secondary']"));
 		Actions action = new Actions(driver);
 		action.moveToElement(ele).click().build().perform();
